@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>article</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="/users/new">Add Article</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <% data.forEach(element => { %>
+        <article>
+          <h1><%= element.title %></h1>
+          <p><%= element.description%></p>
+          <a href="/users/<%= element._id%>/details">Details of the article</a>
+        </article>
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>
