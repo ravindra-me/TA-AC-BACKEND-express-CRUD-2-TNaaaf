@@ -6,15 +6,10 @@ var Article = require('../models/Article');
 
 /* GET users listing. */
 
+// new article
+
 router.get('/new', (req, res) => {
   res.render('form');
-});
-
-router.get('/', (req, res, next) => {
-  Article.find({}, (err, content) => {
-    if (err) return next(err);
-    res.render('article', { data: content });
-  });
 });
 
 router.post('/', (req, res, next) => {
@@ -26,6 +21,15 @@ router.post('/', (req, res, next) => {
   });
 });
 
+// articles page
+router.get('/', (req, res, next) => {
+  Article.find({}, (err, content) => {
+    if (err) return next(err);
+    res.render('article', { data: content });
+  });
+});
+
+// details page
 router.get('/:id/details', (req, res, next) => {
   Article.findById(req.params.id, (err, content) => {
     if (err) return next(err);
@@ -33,6 +37,7 @@ router.get('/:id/details', (req, res, next) => {
   });
 });
 
+// edit data page
 router.get('/:id/edit', (req, res, next) => {
   Article.findById(req.params.id, req.body, (err, content) => {
     if (err) return next(err);
@@ -53,7 +58,7 @@ router.post('/:id', (req, res, next) => {
     }
   );
 });
-
+// delete the article
 router.get('/:id/delete', (req, res, next) => {
   Article.findByIdAndDelete(req.params.id, (err, content) => {
     if (err) return next(err);
@@ -63,19 +68,23 @@ router.get('/:id/delete', (req, res, next) => {
 
 // increment and decrement of likes
 
-router.get('/:id/inc', (req, res, next) => {
-  console.log(req.params.id);
-  let article = Article.findById(req.params.id);
+router.get('/:id', (req, res, next) => {
+  Article.findById(req.params.id, (err, content) => {
+    if (err) return next(err);
+    res.render('details.ejs', { data: content });
+  });
+});
 
-  Article.findByIdAndUpdate(req.params.id, {
-    $inc: { 'article.likes': 1 },
-  }),
-    { new: true },
+router.get('/:id/like', (req, res, next) => {
+  console.log(req.params.id);
+  Article.findByIdAndUpdate(
+    req.params.id,
+    { $inc: { likes: 1 } },
     (err, content) => {
-      console.log(content);
       if (err) return next(err);
-      res.render('details', { data: content });
-    };
+      res.redirect('/users/' + req.params.id);
+    }
+  );
 });
 
 module.exports = router;

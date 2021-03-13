@@ -6,7 +6,7 @@ let article = new Schema(
     description: { type: String, required: true },
     tags: [String],
     author: { type: String, required: true },
-    likes: Number,
+    likes: { type: Number, default: 0 },
   },
   {
     timestamps: true,
