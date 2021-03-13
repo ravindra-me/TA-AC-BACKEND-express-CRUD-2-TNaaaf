@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <a href="/users">Back articles Page</a>
+    <h1><%= data.title %></h1>
+    <p class="text"><%= data.description%></p>
+    <div class="tags">
+      <h2>Tags</h2>
+      <div>
+        <%data.tags.forEach(e=> { %>
+        <span><%= e%></span>
+        <%})%>
+      </div>
+    </div>
+    <div class="likes">
+      <h2>Likes</h2>
+      <p><%= data.likes ? data.likes : 0%></p>
+      <a href="/users/<%= data._id%>/like">Like</a>
+    </div>
+    <a href="/users/<%=data._id%>/edit">edit</a>
+    <a href="/users/<%=data._id %>/delete">Delete</a>
+    <h1>Comments</h1>
+    <form action="/users/<%= data._id%>/comment" method="POST">
+      <textarea name="content" id="" cols="30" rows="10"></textarea>
+      <button class="btn" type="submit">comment</button>
+    </form>
+    <div>
+      <h2>Comments</h2>
+      <% data.comments.forEach(element=> { %>
+      <div>
+        <p><%= element.content %></p>
+        <a href="/comment/<%= element._id %>/edit" class="btn">Edit</a>
+        <a href="/comment/<%= element._id %>/delete">Delete</a>
+      </div>
+      <%}) %>
+    </div>
+  </body>
+</html>
