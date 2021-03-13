@@ -152,6 +152,11 @@ table {
   border-spacing: 0;
 }
 
+header {
+  padding: 2rem;
+  background-color: aquamarine;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -188,6 +193,12 @@ form {
           flex-direction: column;
 }
 
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .btn2 {
   padding: 1rem 0;
   display: block;
@@ -197,5 +208,41 @@ form {
 
 .padding {
   padding: 5rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.text {
+  margin: 1rem 0;
+}
+
+.tags h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tags span {
+  padding: 0.5rem;
+  background-color: aquamarine;
+  display: inline-block;
+}
+
+.likes h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.likes p {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */
