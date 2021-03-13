@@ -1,0 +1,73 @@
+header {
+  padding: 2rem;
+  background-color: aquamarine;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+form {
+  width: 500px;
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.btn2 {
+  padding: 1rem 0;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+.padding {
+  padding: 5rem 0;
+}
+.text-center {
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.text {
+  margin: 1rem 0;
+}
+.tags {
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  span {
+    padding: 0.5rem;
+    background-color: aquamarine;
+    display: inline-block;
+  }
+}
+
+.likes {
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
