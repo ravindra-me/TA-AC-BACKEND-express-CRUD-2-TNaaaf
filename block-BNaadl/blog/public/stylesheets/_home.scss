@@ -1,3 +1,7 @@
+header {
+  padding: 2rem;
+  background-color: aquamarine;
+}
 .form-control {
   display: block;
   width: 100%;
@@ -19,6 +23,9 @@ form {
 .flex-column {
   flex-direction: column;
 }
+.justify-between {
+  justify-content: space-between;
+}
 
 .btn2 {
   padding: 1rem 0;
@@ -34,12 +41,33 @@ form {
 }
 h1 {
   font-size: 2rem;
+  font-weight: 600;
 }
 
+.text {
+  margin: 1rem 0;
+}
 .tags {
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
   span {
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: aquamarine;
     display: inline-block;
+  }
+}
+
+.likes {
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 }
