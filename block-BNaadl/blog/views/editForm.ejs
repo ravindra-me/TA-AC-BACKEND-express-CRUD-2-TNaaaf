@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="/">Back Home Page</a>
+        <a href="/users/<%= data._id%>/details">Go to details</a>
+      </div>
+    </header>
+    <main class="flex justify-center align-center">
+      <form action="/users/<%= data._id%>" method="POST">
+        <label for="title">title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="enter article title"
+          value="<%= data.title%>"
+          class="form-control"
+        />
+        <label for="description"></label>
+        <textarea
+          id="description"
+          cols=""
+          rows="10"
+          name="description"
+          placeholder="write something about article"
+          class="form-control"
+        >
+          <%= data.description%>
+        </textarea>
+        <label for="tags"></label>
+        <input
+          type="text"
+          id="tags"
+          name="tags"
+          placeholder="enter tags values"
+          value="<%= data.tags%>"
+          class="form-control"
+        />
+        <label for="author"></label>
+        <input
+          type="text"
+          name="author"
+          id="author"
+          placeholder=" enter author name"
+          value="<%= data.author%>"
+        />
+        <button type="submit" class="btn2">submit</button>
+      </form>
+    </main>
+  </body>
+</html>
