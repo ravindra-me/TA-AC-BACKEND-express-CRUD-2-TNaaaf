@@ -20,9 +20,8 @@
     </div>
     <div>
       <h2>Likes</h2>
-      <p><%= data.likes%></p>
-      <a href="/users/<%= data._id%>/inc">Increment</a>
-      <a href="/users/<%= data._id%>/dic">Decrement</a>
+      <p><%= data.likes ? data.likes : 0%></p>
+      <a href="/users/<%= data._id%>/like">Like</a>
     </div>
     <a href="/users/<%=data._id%>/edit">edit</a>
     <a href="/users/<%=data._id %>/delete">Delete</a>

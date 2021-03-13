@@ -11,14 +11,17 @@
       </div>
     </header>
     <main>
+      <h2 class="text-center">Articles</h2>
       <section>
-        <% data.forEach(element => { %>
+        <% if(data.length) { %> <% data.forEach(element => { %>
         <article>
           <h1><%= element.title %></h1>
-          <p><%= element.description%></p>
+          <p><%= element.description.substr(0,50)%>...</p>
           <a href="/users/<%= element._id%>/details">Details of the article</a>
         </article>
-        <% }) %>
+        <% }) %> <%}else { %>
+        <h2>no article</h2>
+        <% } %>
       </section>
     </main>
   </body>
