@@ -35,3 +35,11 @@ form {
 h1 {
   font-size: 2rem;
 }
+
+.tags {
+  span {
+    padding: 1rem;
+    background-color: aquamarine;
+    display: inline-block;
+  }
+}
