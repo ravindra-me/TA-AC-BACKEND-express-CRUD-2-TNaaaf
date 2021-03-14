@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Author Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex justify-between-flex align-center">
+        <a href="/" class="logo">Book App</a>
+        <nav class="nav">
+          <ul class="flex align-center">
+            <li><a href="/author">List Of Author</a></li>
+            <li><a href="/book">List of Book</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero padding">
+        <div class="container">
+          <form action="/author" method="POST">
+            <label for="name">name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="enter author name"
+              id="name"
+              class="form-control"
+            />
+            <label for="email">email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="enter email"
+              id="email"
+              class="form-control"
+            />
+            <label for="country">country name</label>
+            <input
+              type="text"
+              name="country"
+              placeholder="enter country name"
+              id="country"
+              class="form-control"
+            />
+            <button type="submit">add author details</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
