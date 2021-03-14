@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body id="listBook">
+    <header>
+      <div class="container flex justify-between-flex align-center">
+        <a href="/" class="logo">Book App</a>
+        <nav class="nav">
+          <ul class="flex align-center">
+            <li><a href="/author">List Of Author</a></li>
+            <li><a href="/book">List of Book</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="padding">
+        <h1 class="primary-heading text-center">List Of Book</h1>
+        <div class="container grid grid-template-col-3 align-center gap">
+          <% data.forEach(element=> {%>
+          <article class="book card">
+            <div class="font-0">
+              <img src="<%= element.coverImage %>" alt="" class="img" />
+            </div>
+            <div>
+              <h4>Title</h4>
+              <p><%= element.title %></p>
+            </div>
+            <div>
+              <h4>Author Name</h4>
+              <p><%= element.authorId.name %></p>
+            </div>
+            <a href="/book/<%= element._id %>" class="btn">show more</a>
+          </article>
+          <%}) %>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
