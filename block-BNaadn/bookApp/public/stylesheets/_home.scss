@@ -1,0 +1,83 @@
+header {
+  padding: 1.5rem;
+  background-color: rgba(123, 174, 219, 0.5);
+  .logo {
+    font-size: 2rem;
+    color: brown;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 0 -4px 5px rgba(brown, 0.5);
+  }
+  .nav {
+    li {
+      margin-left: 2rem;
+      a {
+        font-size: 1rem;
+        color: black;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+main {
+  .card {
+    box-shadow: 0 5px 10px rgba(black, 0.5);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    div {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      padding: 1rem;
+      display: inline-block;
+      background-color: black;
+      color: wheat;
+      border-radius: 0.45rem;
+      box-shadow: 0 5px 5px rgba(black, 0.4);
+      //   transition: all ease-in-out 0.5s;
+      :hover {
+        background-color: white;
+        color: white;
+      }
+    }
+  }
+}
+
+.authorBox {
+  margin-bottom: 2rem;
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.font-0 {
+  font-size: 0;
+  width: 50%;
+  margin: 0 auto;
+}
+.img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.book-detail {
+  .container {
+    div {
+      margin-bottom: 1rem;
+    }
+    h2 {
+      border-bottom: 1px solid black;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}

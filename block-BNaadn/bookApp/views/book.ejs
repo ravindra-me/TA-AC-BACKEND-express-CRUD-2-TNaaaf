@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex justify-between-flex align-center">
+        <a href="/" class="logo">Book App</a>
+        <nav class="nav">
+          <ul class="flex align-center">
+            <li><a href="/author">List Of Author</a></li>
+            <li><a href="/book">List of Book</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="padding book-detail">
+        <div class="container">
+          <div>
+            <h2 class="secondary-heading">Title</h2>
+            <h3><%= data.title %></h1>
+          </div>
+          <div>
+            <h2 class="secondary-heading">Summary</h2>
+            <p><%= data.summary%></p>
+          </div>
+          <div>
+            <h2 class="secondary-heading">Publication</h2>
+            <p><%= data.publication %></p>
+          </div>
+          <div>
+            <h2 class="secondary-heading">Author Name</h2>
+            <p><%= data.authorId.name %></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
